@@ -73,6 +73,7 @@
                  <table class="table table-striped table-hover" >
                 <thead class="thead-dark">  
                          <tr>
+                            
                              <th>Organization Id</th>
                              <th>DSR no</th>
                              <th>Product Id</th>
@@ -86,10 +87,44 @@
                              <th>Price</th>
                              <th>Initial HOD</th>
                              <th>Qty Distributed</th>
+                             <th>Stamp / Sign</th>
                              <th>Qty Remaining</th>
                              <th>Remarks</th>
+                             <th>Bill</th>
+                             <th>Dsr</th>
                              <th>Last Edited</th>
                          </tr>
+
+                         <?php
+  $i=1;
+  foreach($data as $row)
+  {
+ 
+  echo "<td>".$row->Oraganization_ID."</td>";
+  echo "<td>".$row->DSR_no."</td>";
+  echo "<td>".$row->Product_ID."</td>";
+  echo "<td>".$row->purchase_date."</td>";
+  echo "<td>".$row->purchase_authority."</td>";
+  echo "<td>".$row->supplier_name."</td>";
+  echo "<td>".$row->product_name."</td>";
+  echo "<td>".$row->product_desc."</td>";
+  echo "<td>".$row->qty."</td>";
+  echo "<td>".$row->Price_Per_Quantity."</td>";
+  echo "<td>".$row->price."</td>";
+  echo "<td>".$row->initial_HOD."</td>";
+  echo "<td>".$row->Quantity_Distributed."</td>";
+  echo "<td>".$row->stamp_sign_cs."</td>";
+  echo "<td>".$row->qty_remaining."</td>";
+  echo "<td>".$row->remarks."</td>";
+  echo "<td>".$row->bill_pic."</td>";
+  echo "<td>".$row->dsr_pic."</td>";
+  echo "<td>".$row->last_edited."</td>";
+
+
+  echo "</tr>";
+  $i++;
+  }
+   ?>
                          
                      </table>
                  </div>

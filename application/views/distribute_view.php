@@ -51,11 +51,30 @@
                         <th scope="col">Quantity Remaining</th>
                         <th scope="col">Date Distributed</th>
                         <th scope="col">Head Office Initials</th>
-                        <th scope="col">Purchase Authority</th>
                         <th scope="col">Stamp of Initial</th>
                         <th scope="col">Edit</th>
                     </tr>
+
+                    
+                    <?php
+  $i=1;
+  foreach($data as $row)
+  {
+ 
+  echo "<td>".$row->Product_ID."</td>";
+  echo "<td>".$row->qty_distributed."</td>";
+  echo "<td>".$row->qty_remaining."</td>";
+  echo "<td>".$row->date_distributed."</td>";
+  echo "<td>".$row->head_initials."</td>";
+  echo "<td>".$row->stamp_of_initials."</td>";
+  //echo "<td>".<a href="<?php echo base_url().'index.php/Welcome/distribute_items/' >" class="btn btn-primary">Edit</a>"</td>"
+
+  echo "</tr>";
+  $i++;
+  }
+   ?>
                 </thead> 
+          </table>            
 </div>
         </div>
     <!-- Optional JavaScript -->

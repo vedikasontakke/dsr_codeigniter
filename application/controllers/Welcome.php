@@ -18,14 +18,40 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/userguide3/general/urls.html
 	 */
+
+	 
+	public function __construct()
+	{
+	/*call CodeIgniter's default Constructor*/
+	parent::__construct();
+  
+	/*load database libray manually*/
+	$this->load->database();
+  
+	/*load Model*/
+	$this->load->model('Dsr_model');
+	}
+
 	public function index()
 	{
+		
 		$this->load->view('main');
+
 	}
+
 
 	public function dsr_cs()
 	{
-		$this->load->view('view_cs');
+		/*
+		$this->load->model('Dsr_module');
+        $master_cs = $this->Dsr_module->all();
+        $data = array();
+        $data['master_cs'] = $master_cs;
+        */
+	
+		$result['data']=$this->Dsr_model->display_master_cs();
+		$this->load->view('view_cs',$result);
+		//$this->load->view('view_cs');
 	}
 
 	public function dept_dsr()
@@ -55,7 +81,8 @@ class Welcome extends CI_Controller {
 
 	public function dsr_cs_distribute_view()
 	{
-		$this->load->view('distribute_view');
+		$result['data']=$this->Dsr_model->display_cs_distribution();
+		$this->load->view('distribute_view' , $result);
 	}
 
 	public function dsr_cs_distribute_items()
