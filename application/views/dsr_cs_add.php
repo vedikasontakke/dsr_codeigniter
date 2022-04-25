@@ -78,8 +78,7 @@
                     <option value="pharmacy">Pharmacy</option>
                     <option value="chemical">Chemical</option>
                     <option value="plastic_polymer">Plastic Polymer</option>
-                    <option value="girls_hostel1">Girls Hostel 1</option>
-                    <option value="girls_hostel2">Girls Hostel 2</option>
+                    <option value="girls_hostel1">Girls Hostel</option>
                     <option value="boys_hostel">Boys Hostel</option>
                     <option value="office">Office</option>
                     <option value="library">Library</option>

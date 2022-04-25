@@ -34,11 +34,8 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		
 		$this->load->view('main');
-
 	}
-
 
 	public function dsr_cs()
 	{
@@ -57,6 +54,13 @@ class Welcome extends CI_Controller {
 	public function dept_dsr()
 	{
 		$this->load->view('dept_dsr');
+		//$result['data']=$this->Dsr_model->get_comp_dsr();
+
+	}
+	public function dept_view()
+	{
+		$result['data']=$this->Dsr_model->get_comp_dsr();
+		$this->load->view('dept_view' ,$result);
 	}
 
 	public function hostel_dsr()
@@ -90,8 +94,4 @@ class Welcome extends CI_Controller {
 		$this->load->view('distribute_items');
 	}
 
-	public function dept_view()
-	{
-		$this->load->view('dept_view');
-	}
 }

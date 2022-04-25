@@ -44,17 +44,16 @@
   </br>
   </br>
   </br>
-  
 
     <center>
         
     <div class="row">
         <div class="col-sm-4">
-          <a href="<?php echo base_url().'index.php/Welcome/dept_view';?>">
+          <a href="<?php echo base_url().'index.php/Welcome/dept_view?dept=Computer';$_GET?>">
           <div class="card bg-dark text-white bg-opacity-40  " style="width: 30rem; display: inline-block" >
             <div class="card-body">
-              <b><h3 class="card-title">COMPUTER</h3></b>
-             
+              <b><h3 class="card-title">Computer</h3></b>
+          
             </div>
           </div>
         </a>
@@ -63,7 +62,7 @@
     </br></br>
     
         <div class="col-sm-4">
-          <a href="<?php echo base_url().'index.php/Welcome/dept_view';?>">
+          <a href="<?php echo base_url().'index.php/Welcome/dept_view?dept=IT';$_GET?>">
           <div class="card bg-dark text-white bg-opacity-40 " style="width: 30rem; display: inline-block" >
             <div class="card-body">
              <b><h3 class="card-title">IT</h3></b> 
@@ -74,10 +73,10 @@
         </div>
 
         <div class="col-sm-4">
-          <a href="<?php echo base_url().'index.php/Welcome/dept_view';?>">
+          <a href="<?php echo base_url().'index.php/Welcome/dept_view?dept=Mechanical';$_GET?>">
             <div class="card bg-dark text-white bg-opacity-40 " style="width: 30rem; display: inline-block" >
               <div class="card-body">
-                <b><h3 class="card-title">MECH</h3></b>
+                <b><h3 class="card-title">Mechanical</h3></b>
                 
               </div>
             </div>
@@ -90,10 +89,10 @@
     </br>
       <div class="row">
       <div class="col-sm-4">
-        <a href="<?php echo base_url().'index.php/Welcome/dept_view';?>">
+        <a href="<?php echo base_url().'index.php/Welcome/dept_view?dept=Civil';$_GET?>">
         <div class="card bg-dark text-white bg-opacity-40 " style="width: 30rem; display: inline-block" >
           <div class="card-body">
-           <b><h3 class="card-title">CIVIL</h3></b> 
+           <b><h3 class="card-title">Civil</h3></b> 
         
           </div>
         </div>
@@ -101,20 +100,20 @@
       </div>
     
       <div class="col-sm-4">
-        <a href="<?php echo base_url().'index.php/Welcome/dept_view';?>">
+        <a href="<?php echo base_url().'index.php/Welcome/dept_view?dept=Electrical';$_GET?>">
         <div class="card bg-dark text-white bg-opacity-40 " style="width: 30rem; display: inline-block" >
           <div class="card-body">
-            <b><h3 class="card-title">ET</h3></b>
+            <b><h3 class="card-title">Electrical</h3></b>
           
           </div>
         </div>
       </a>
       </div>
       <div class="col-sm-4">
-        <a href="<?php echo base_url().'index.php/Welcome/dept_view';?>">
+        <a href="<?php echo base_url().'index.php/Welcome/dept_view?dept=Electronics';$_GET?>">
           <div class="card bg-dark text-white bg-opacity-40 " style="width: 30rem; display: inline-block" >
             <div class="card-body">
-             <b><h3 class="card-title">EXTC</h3></b> 
+             <b><h3 class="card-title">Electronics</h3></b> 
             
             </div>
           </div>
@@ -126,10 +125,10 @@
 
     <div class="row">
         <div class="col-sm-4">
-          <a href="<?php echo base_url().'index.php/Welcome/dept_view';?>">
+          <a href="<?php echo base_url().'index.php/Welcome/dept_view?dept=Pharmacy';$_GET?>">
           <div class="card bg-dark text-white bg-opacity-40 " style="width: 30rem; display: inline-block" >
             <div class="card-body">
-             <b><h3 class="card-title">PHARMACY</h3></b> 
+             <b><h3 class="card-title">Pharmacy</h3></b> 
              
             </div>
           </div>
@@ -137,10 +136,10 @@
         </div>
 
         <div class="col-sm-4">
-          <a href="<?php echo base_url().'index.php/Welcome/dept_view';?>">
+          <a href="<?php echo base_url().'index.php/Welcome/dept_view?dept=Chemical';$_GET?>">
           <div class="card bg-dark text-white bg-opacity-40 " style="width: 30rem; display: inline-block" >
             <div class="card-body">
-            <b><h3 class="card-title">CHEMICAL</h3></b>  
+            <b><h3 class="card-title">Chemical</h3></b>  
     
             </div>
           </div>
@@ -148,10 +147,10 @@
         </div>
 
         <div class="col-sm-4">
-          <a href="<?php echo base_url().'index.php/Welcome/dept_view';?>">
+          <a href="<?php echo base_url().'index.php/Welcome/dept_view?dept=Plastic Polymer';$_GET?>">
             <div class="card bg-dark text-white bg-opacity-40 " style="width: 30rem; display: inline-block" >
               <div class="card-body">
-               <b><h3 class="card-title">PLASTIC POLYMER</h3></b> 
+               <b><h3 class="card-title">Plastic Polymer</h3></b> 
               
               </div>
             </div>

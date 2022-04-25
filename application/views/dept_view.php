@@ -31,7 +31,13 @@
     </style>
 </br>
             <div class="container"> 
-               <center> <h1>Welcome to __Dept__ DSR</h1> </center>
+               <center> <h1><?php 
+               
+               if(isset($_GET['dept'])): 
+               $d = $_GET['dept']; 
+               echo "Welcome to " . $d . " DSR"; 
+               endif; 
+               ?></h1> </center>
             </div>
         </div>
 </br></br>
@@ -44,9 +50,28 @@
                         <th scope="col">Quantity Remaining</th>
                         <th scope="col">Date Distributed</th>
                         <th scope="col">Head Office Initials</th>
-                        <th scope="col">Purchase Authority</th>
                         <th scope="col">Stamp of Initial</th>
                     </tr>
+
+                    <?php
+  $i=1;
+  foreach($data as $row)
+  {
+ 
+  echo "<td>".$row->Product_ID."</td>";
+  echo "<td>".$row->qty_distributed."</td>";
+  echo "<td>".$row->qty_remaining."</td>";
+  echo "<td>".$row->date_distributed."</td>";
+  echo "<td>".$row->head_initials."</td>";
+  echo "<td>".$row->stamp_of_initials."</td>";
+  
+
+
+  echo "</tr>";
+  $i++;
+  }
+   ?>
+
                 </thead> 
 </div>
         </div>

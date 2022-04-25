@@ -53,21 +53,7 @@
                <center> <h1>Central Store DSR</h1> </center>
             </div>
         </div>
-      <!--  <div class="container" style="padding-top :10px">
-            <div class="row">
-                <div class="col-md-20">
-                    <div class="row ">
-                        
-                        <div class="col-20 text-right" >
-                            
-                        </div>
-                    </div>
-                    <hr>
-                </div>
-        
-            </div>-->
-            
-           
+          
              <div class="row">
                  <div class="col-md-50">
                  <table class="table table-striped table-hover" >

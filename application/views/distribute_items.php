@@ -35,7 +35,22 @@
             </div>
 
             <div class="form-group">
-                <input type="text" class="form-control item" id="head_initials" placeholder="HOD Initials">
+                <select name="initial_hod" class="form-control item" id="initial_hod">
+                    <option value="computer">Computer</option>
+                    <option value="civil">Civil</option>
+                    <option value="electrical">Electrical</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="mechanical">Mechanical</option>
+                    <option value="IT">IT</option>
+                    <option value="pharmacy">Pharmacy</option>
+                    <option value="chemical">Chemical</option>
+                    <option value="plastic_polymer">Plastic Polymer</option>
+                    <option value="girls_hostel1">Girls Hostel</option>
+                    <option value="boys_hostel">Boys Hostel</option>
+                    <option value="office">Office</option>
+                    <option value="library">Library</option>
+
+                  </select>
             </div>
 
             <div class="form-group">
