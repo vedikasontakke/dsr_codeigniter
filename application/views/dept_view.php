@@ -65,13 +65,10 @@
   echo "<td>".$row->head_initials."</td>";
   echo "<td>".$row->stamp_of_initials."</td>";
   
-
-
   echo "</tr>";
   $i++;
   }
    ?>
-
                 </thead> 
 </div>
         </div>
