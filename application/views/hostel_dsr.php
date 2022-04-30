@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
   <link rel="stylesheet" href="style.css">
+  <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo base_url('/assets/css/AllStyle.css');?>">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">

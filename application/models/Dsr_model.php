@@ -21,7 +21,10 @@ class Dsr_model extends CI_Model {
       $query = $this->db->get();
       return $query->result();
   }
-  
+
+  function add_cs($formArray){
+    $this->db->insert('master_cs' , $formArray);   // INSERT INTO user(name,email) values (? , ?)
+  }
 }
   
 ?>

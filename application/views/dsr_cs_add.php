@@ -7,13 +7,13 @@
     <title>The Easiest Way to Add Input Masks to Your Forms</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo base_url('/assets/css/styles.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('/assets/css/style.css');?>">
 </head>
 <body>
     
     <div class="registration-form">
         
-        <form>
+        <form method="post" action="<?= base_url() ?>master_cs/savedata">
            <center><h3> ADD PRODUCT DETAILS </h3></center> </br>
             <!--<div class="form-icon">
                 <span><i class="icon icon-user"></i></span>
@@ -93,7 +93,7 @@
             <div class="form-group">
             
                     <label>&nbsp &nbsp Stamp / Sign of Central Store:</label>
-                    <link rel="stylesheet" type= "text/css" href ="<?php echo base_url('/assets/css/styles.css');?>"/>
+                    <link rel="stylesheet" type= "text/css" href ="<?php echo base_url('/assets/css/style.css');?>"/>
                     <div id="content">
 
                     <form method="POST" action="" enctype="multipart/form-data">
@@ -112,7 +112,7 @@
             <div class="form-group">
             
                 <label>&nbsp &nbsp Bill photo:</label>
-                <link rel="stylesheet" type= "text/css" href ="<?php echo base_url('/assets/css/styles.css');?>"/>
+                <link rel="stylesheet" type= "text/css" href ="<?php echo base_url('/assets/css/style.css');?>"/>
                 <div id="content">
 
                 <form method="POST" action="" enctype="multipart/form-data">
@@ -122,7 +122,7 @@
         <div class="form-group">
             
             <label>&nbsp &nbsp DSR Photo:</label>
-            <link rel="stylesheet" type= "text/css" href ="<?php echo base_url('/assets/css/styles.css');?>"/>
+            <link rel="stylesheet" type= "text/css" href ="<?php echo base_url('/assets/css/style.css');?>"/>
             <div id="content">
 
             <form method="POST" action="" enctype="multipart/form-data">
@@ -134,8 +134,9 @@
             <div class="form-group">
                 <button type="button" class="btn btn-block create-account">Submit</button>
             </div>
+            </form>
     <!-- 
-        </form>
+        
         <div class="social-media">
             <h5>Sign up with social media</h5>
             <div class="social-icons">

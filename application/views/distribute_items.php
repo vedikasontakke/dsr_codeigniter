@@ -7,7 +7,7 @@
     <title>The Easiest Way to Add Input Masks to Your Forms</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo base_url('/assets/css/styles.css');?>">
+    <<link href="<?php echo base_url('/assets/css/style.css');?>"  rel="stylesheet" />
 </head>
 <body>
     
@@ -56,7 +56,7 @@
             <div class="form-group">
             
             <label>&nbsp &nbsp DSR Photo:</label>
-            <link rel="stylesheet" type= "text/css" href ="<?php echo base_url('/assets/css/styles.css');?>"/>
+            <link rel="stylesheet" type= "text/css" href ="<?php echo base_url('/assets/css/style.css');?>"/>
             <div id="content">
 
             <form method="POST" action="" enctype="multipart/form-data">
@@ -80,6 +80,6 @@
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src=<?php echo base_url("/assets/js/script.js");?>></script>
 </body>
 </html>
