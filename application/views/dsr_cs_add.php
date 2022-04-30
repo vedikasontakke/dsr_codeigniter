@@ -13,26 +13,27 @@
     
     <div class="registration-form">
         
-        <form method="post" action="<?= base_url() ?>master_cs/savedata">
+        <form method="post" action="" enctype="multipart/formdata">
            <center><h3> ADD PRODUCT DETAILS </h3></center> </br>
             <!--<div class="form-icon">
                 <span><i class="icon icon-user"></i></span>
             </div>-->
             <div class="form-group">
-                <input type="text" class="form-control item" id="Org_id" placeholder="Organization ID">
+                <input type="text" class="form-control item" name="Oraganization_ID" id="Oraganization_ID" placeholder="Organization ID">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control item" id="dsr_no" placeholder="DSR No.">
+                <input type="text" class="form-control item" name="DSR_no" id="DSR_no" placeholder="DSR No.">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control item" id="product_id" placeholder="Product ID">
+                <input type="text" class="form-control item" name="Product_ID" id="Product_ID" placeholder="Product ID">
             </div>
             <div class="form-group">
-                <input type="date" class="form-control item" id="purchase_date" placeholder="Purchase Date">
+                <input type="date" class="form-control item" name="purchase_date" id="purchase_date" placeholder="Purchase Date">
             </div>
            
             <div class="form-group">
-                      <select name="pur_auth" class="form-control item" id="pur_auth" placeholder="Choose Authority" >
+            <label>&nbsp &nbsp Choose Authority</label>
+                      <select  class="form-control item" name="purchase_authority" id="purchase_authority" placeholder="Choose Authority" >
                         <option value="Principal">Principal</option>
                         <option value="DTE">DTE</option>
                         <option value="JD">JD</option>
@@ -40,35 +41,36 @@
             </div>
 
             <div class="form-group">
-                <input type="txt" class="form-control item" id="supplier_name" placeholder="Supplier Name">
+                <input type="text" class="form-control item" name="supplier_name" id="supplier_name" placeholder="Supplier Name">
             </div>
 
             <div class="form-group">
-                <textarea class="form-control item" id="supp_addr" placeholder="Supplier Address" name="supp_addr" rows="2" cols="50"></textarea>
+                <textarea class="form-control item" name="Supplier_Address" id="Supplier_Address" placeholder="Supplier Address" name="supp_addr" rows="2" cols="50"></textarea>
             </div>
 
             <div class="form-group">
-                <input type="txt" class="form-control item" id="product_name" placeholder="Product Name">
+                <input type="text" class="form-control item" name="product_name" id="product_name" placeholder="Product Name">
             </div>
 
             <div class="form-group">
-                <textarea class="form-control item" id="product_desc" placeholder="Product Name" name="product_desc" rows="2" cols="50"></textarea>
+                <textarea class="form-control item" name="product_desc" id="product_desc" placeholder="Product Discription" name="product_desc" rows="2" cols="50"></textarea>
             </div>
 
             <div class="form-group">
-                <input type="txt" class="form-control item" id="qty" placeholder="Quantity">
+                <input type="text" class="form-control item" name="qty"  id="qty" placeholder="Quantity">
             </div>
 
             <div class="form-group">
-                <input type="txt" class="form-control item" id="price_per_qty" placeholder="Price Per Quantity">
+                <input type="text" class="form-control item" name="Price_Per_Quantity" id="Price_Per_Quantity" placeholder="Price Per Quantity">
             </div>
 
             <div class="form-group">
-                <input type="txt" class="form-control item" id="total_price" placeholder="Total Price">
+                <input type="text" class="form-control item" name="price" id="price" placeholder="Total Price">
             </div>
 
             <div class="form-group">
-                <select name="initial_hod" class="form-control item" id="initial_hod">
+            <label>&nbsp &nbsp Initial of HOD</label>
+                <select name="initial_HOD" class="form-control item" name="initial_HOD" id="initial_HOD" placeholder="Initial Of HOD">
                     <option value="computer">Computer</option>
                     <option value="civil">Civil</option>
                     <option value="electrical">Electrical</option>
@@ -87,26 +89,26 @@
             </div>
 
             <div class="form-group">
-                <input type="txt" class="form-control item" id="qty_distributed" placeholder="Quantity Distributed">
+                <input type="text" class="form-control item" name="Quantity_Distributed" id="Quantity_Distributed" placeholder="Quantity Distributed">
             </div>
 
             <div class="form-group">
             
-                    <label>&nbsp &nbsp Stamp / Sign of Central Store:</label>
+                    <label>&nbsp &nbsp Stamp / Sign of Central Store</label>
                     <link rel="stylesheet" type= "text/css" href ="<?php echo base_url('/assets/css/style.css');?>"/>
                     <div id="content">
 
                     <form method="POST" action="" enctype="multipart/form-data">
-	                <input type="file" class="form-control item" name="uploadfile" placeholder="Quantity Distributed" value=""/>
+	                <input type="file" class="form-control item" name="stamp_sign_cs" placeholder="Stamp/Sign CS" value=""/>
             </div>
 
             
             <div class="form-group">
-                <input type="txt" class="form-control item" id="qty_remaining" placeholder="Quantity Remaining">
+                <input type="text" class="form-control item" name="qty_remaining" id="qty_remaining" placeholder="Quantity Remaining">
             </div>
 
             <div class="form-group">
-                <textarea class="form-control item" id="remarks" placeholder="Remarks" name="product_desc" rows="2" cols="50"></textarea>
+                <textarea class="form-control item" name="remarks" id="remarks" placeholder="Remarks" name="product_desc" rows="2" cols="50"></textarea>
             </div>
 
             <div class="form-group">
@@ -116,7 +118,7 @@
                 <div id="content">
 
                 <form method="POST" action="" enctype="multipart/form-data">
-                <input type="file" class="form-control item" name="uploadfile" placeholder="Quantity Distributed" value=""/>
+                <input type="file" class="form-control item" name="bill_pic" placeholder="Bill Photo" value=""/>
         </div>
 
         <div class="form-group">
@@ -126,13 +128,13 @@
             <div id="content">
 
             <form method="POST" action="" enctype="multipart/form-data">
-            <input type="file" class="form-control item" name="uploadfile" placeholder="Quantity Distributed" value=""/>
+            <input type="file" class="form-control item" name="dsr_pic" placeholder="DSR Photo" value=""/>
     </div>
 
 
 
             <div class="form-group">
-                <button type="button" class="btn btn-block create-account">Submit</button>
+                <button type="submit" value="submit" id="submit" name="submit" class="btn btn-block create-account">Submit</button>
             </div>
             </form>
     <!-- 

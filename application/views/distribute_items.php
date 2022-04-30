@@ -13,29 +13,29 @@
     
     <div class="registration-form">
         
-        <form>
+        <form action="" method="post" enctype="multipart/formdata">
            <center><h3> ADD DISTRIBUTED ITEM DETAILS </h3></center> </br>
             <!--<div class="form-icon">
                 <span><i class="icon icon-user"></i></span>
             </div>-->
             <div class="form-group">
-                <input type="text" class="form-control item" id="product_id" placeholder="Product ID">
+                <input type="text" class="form-control item" name= "Product_ID" id="Product_ID" placeholder="Product ID">
             </div>
 
             <div class="form-group">
-                <input type="text" class="form-control item" id="qty_distributed" placeholder="Quantity Distributed">
+                <input type="text" class="form-control item" name= "qty_distributed" id="qty_distributed" placeholder="Quantity Distributed">
             </div>
 
             <div class="form-group">
-                <input type="text" class="form-control item" id="qty_remaining" placeholder="Quantity Remaining">
+                <input type="text" class="form-control item" name= "qty_remaining" id="qty_remaining" placeholder="Quantity Remaining">
             </div>
 
             <div class="form-group">
-                <input type="date" class="form-control item" id="date_distributed" placeholder="Date of Distributed">
+                <input type="date" class="form-control item" name= "date_distributed" id="date_distributed" placeholder="Date of Distributed">
             </div>
 
             <div class="form-group">
-                <select name="initial_hod" class="form-control item" id="initial_hod">
+                <select name="head_initials" class="form-control item"  id="head_initials">
                     <option value="computer">Computer</option>
                     <option value="civil">Civil</option>
                     <option value="electrical">Electrical</option>
@@ -60,14 +60,18 @@
             <div id="content">
 
             <form method="POST" action="" enctype="multipart/form-data">
-            <input type="file" class="form-control item" name="uploadfile" placeholder="Quantity Distributed" value=""/>
+            <input type="file" class="form-control item" name="stamp_of_initials" placeholder="Quantity Distributed" value=""/>
         </div>
 
         <div class="form-group">
-                <button type="button" class="btn btn-block create-account">Submit</button>
+                <input type="submit" id="submit" name="submit" class="btn btn-block create-account" value="Submit">
         </div>
-    <!-- 
+        
         </form>
+
+        
+    <!-- 
+        
         <div class="social-media">
             <h5>Sign up with social media</h5>
             <div class="social-icons">

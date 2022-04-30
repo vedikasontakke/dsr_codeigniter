@@ -22,8 +22,16 @@ class Dsr_model extends CI_Model {
       return $query->result();
   }
 
-  function add_cs($formArray){
-    $this->db->insert('master_cs' , $formArray);   // INSERT INTO user(name,email) values (? , ?)
+  function add_cs($data){
+    $this->db->insert('master_cs' , $data);   
+    return true;
+  }
+
+  function dsr_cs_distribute_items($data)
+  {
+    $this->db->insert('cs_distribution' , $data);   
+    return true;
+
   }
 }
   
