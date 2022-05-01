@@ -106,6 +106,8 @@ class Welcome extends CI_Controller {
 			$response=$this->Dsr_model->add_cs($data);
 			if($response==true){
 			        echo "Records Saved Successfully";
+					redirect(base_url().'index.php/Welcome/dsr_cs');
+
 			}
 			else{
 					echo "Insert error !";
@@ -136,6 +138,8 @@ class Welcome extends CI_Controller {
 			if($response==true){
 				
 			        echo "Records Saved Successfully";
+					redirect(base_url().'index.php/Welcome/dsr_cs_distribute_view');
+
 			}
 			else{
 					echo "Insert error !";

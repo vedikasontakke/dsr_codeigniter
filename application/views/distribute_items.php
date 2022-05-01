@@ -63,7 +63,8 @@
             <input type="file" class="form-control item" name="stamp_of_initials" placeholder="Quantity Distributed" value=""/>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" 
+>
                 <input type="submit" id="submit" name="submit" class="btn btn-block create-account" value="Submit">
         </div>
         
