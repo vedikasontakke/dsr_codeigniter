@@ -20,15 +20,23 @@
             </div>-->
             <div class="form-group">
                 <input type="text" class="form-control item" name="Oraganization_ID" id="Oraganization_ID" placeholder="Organization ID">
+                <?php echo form_error('Oraganization_ID');?>
+
             </div>
             <div class="form-group">
                 <input type="text" class="form-control item" name="DSR_no" id="DSR_no" placeholder="DSR No.">
+                <?php echo form_error('DSR_no');?>
+
             </div>
             <div class="form-group">
                 <input type="text" class="form-control item" name="Product_ID" id="Product_ID" placeholder="Product ID">
+                <?php echo form_error('Product_ID');?>
+
             </div>
             <div class="form-group">
                 <input type="date" class="form-control item" name="purchase_date" id="purchase_date" placeholder="Purchase Date">
+                <?php echo form_error('purchase_date');?>
+
             </div>
            
             <div class="form-group">
@@ -38,34 +46,50 @@
                         <option value="DTE">DTE</option>
                         <option value="JD">JD</option>
                       </select>
+                      <?php echo form_error('purchase_authority');?>
+
             </div>
 
             <div class="form-group">
                 <input type="text" class="form-control item" name="supplier_name" id="supplier_name" placeholder="Supplier Name">
+                <?php echo form_error('supplier_name');?>
+
             </div>
 
             <div class="form-group">
                 <textarea class="form-control item" name="Supplier_Address" id="Supplier_Address" placeholder="Supplier Address" name="supp_addr" rows="2" cols="50"></textarea>
+                <?php echo form_error('Supplier_Address');?>
+
             </div>
 
             <div class="form-group">
                 <input type="text" class="form-control item" name="product_name" id="product_name" placeholder="Product Name">
+                <?php echo form_error('product_name');?>
+
             </div>
 
             <div class="form-group">
                 <textarea class="form-control item" name="product_desc" id="product_desc" placeholder="Product Discription" name="product_desc" rows="2" cols="50"></textarea>
+                <?php echo form_error('product_desc');?>
+
             </div>
 
             <div class="form-group">
                 <input type="text" class="form-control item" name="qty"  id="qty" placeholder="Quantity">
+                <?php echo form_error('qty');?>
+
             </div>
 
             <div class="form-group">
                 <input type="text" class="form-control item" name="Price_Per_Quantity" id="Price_Per_Quantity" placeholder="Price Per Quantity">
+                <?php echo form_error('Price_Per_Quantity');?>
+
             </div>
 
             <div class="form-group">
                 <input type="text" class="form-control item" name="price" id="price" placeholder="Total Price">
+                <?php echo form_error('price');?>
+
             </div>
 
             <div class="form-group">
@@ -86,10 +110,14 @@
                     <option value="library">Library</option>
 
                   </select>
+                  <?php echo form_error('initial_HOD');?>
+
             </div>
 
             <div class="form-group">
                 <input type="text" class="form-control item" name="Quantity_Distributed" id="Quantity_Distributed" placeholder="Quantity Distributed">
+                <?php echo form_error('Quantity_Distributed');?>
+
             </div>
 
             <div class="form-group">
@@ -100,15 +128,20 @@
 
                     <form method="POST" action="" enctype="multipart/form-data">
 	                <input type="file" class="form-control item" name="stamp_sign_cs" placeholder="Stamp/Sign CS" value=""/>
+                    <?php echo form_error('stamp_sign_cs');?>
+
             </div>
 
             
             <div class="form-group">
                 <input type="text" class="form-control item" name="qty_remaining" id="qty_remaining" placeholder="Quantity Remaining">
+                <?php echo form_error('qty_remaining');?>
+
             </div>
 
             <div class="form-group">
                 <textarea class="form-control item" name="remarks" id="remarks" placeholder="Remarks" name="product_desc" rows="2" cols="50"></textarea>
+
             </div>
 
             <div class="form-group">
@@ -119,6 +152,8 @@
 
                 <form method="POST" action="" enctype="multipart/form-data">
                 <input type="file" class="form-control item" name="bill_pic" placeholder="Bill Photo" value=""/>
+                <?php echo form_error('bill_pic');?>
+
         </div>
 
         <div class="form-group">
@@ -129,6 +164,8 @@
 
             <form method="POST" action="" enctype="multipart/form-data">
             <input type="file" class="form-control item" name="dsr_pic" placeholder="DSR Photo" value=""/>
+            <?php echo form_error('dsr_pic');?>
+
     </div>
 
 

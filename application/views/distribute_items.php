@@ -7,7 +7,7 @@
     <title>The Easiest Way to Add Input Masks to Your Forms</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <<link href="<?php echo base_url('/assets/css/style.css');?>"  rel="stylesheet" />
+    <link href="<?php echo base_url('/assets/css/style.css');?>"  rel="stylesheet" />
 </head>
 <body>
     
@@ -20,18 +20,26 @@
             </div>-->
             <div class="form-group">
                 <input type="text" class="form-control item" name= "Product_ID" id="Product_ID" placeholder="Product ID">
+                <?php echo form_error('Product_ID');?>
+
             </div>
 
             <div class="form-group">
                 <input type="text" class="form-control item" name= "qty_distributed" id="qty_distributed" placeholder="Quantity Distributed">
+                <?php echo form_error('qty_distributed');?>
+
             </div>
 
             <div class="form-group">
                 <input type="text" class="form-control item" name= "qty_remaining" id="qty_remaining" placeholder="Quantity Remaining">
+                <?php echo form_error('qty_remaining');?>
+
             </div>
 
             <div class="form-group">
                 <input type="date" class="form-control item" name= "date_distributed" id="date_distributed" placeholder="Date of Distributed">
+                <?php echo form_error('date_distributed');?>
+
             </div>
 
             <div class="form-group">
@@ -49,8 +57,10 @@
                     <option value="boys_hostel">Boys Hostel</option>
                     <option value="office">Office</option>
                     <option value="library">Library</option>
+                    <?php echo form_error('head_initials');?>
 
                   </select>
+
             </div>
 
             <div class="form-group">
@@ -60,7 +70,9 @@
             <div id="content">
 
             <form method="POST" action="" enctype="multipart/form-data">
-            <input type="file" class="form-control item" name="stamp_of_initials" placeholder="Quantity Distributed" value=""/>
+            <input type="file" class="form-control item" name="stamp_of_initials"  value=""/>
+            <?php echo form_error('stamp_of_initials');?>
+
         </div>
 
         <div class="form-group" 

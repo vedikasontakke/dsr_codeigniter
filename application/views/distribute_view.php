@@ -20,7 +20,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
     <title>DSR-View</title>
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.min.css');?>">>
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.min.css');?>">
    
   </head>
   <body>
@@ -30,13 +30,7 @@
             }
     </style>
 </br>
-<div><table align = "right">
-        <td><a href="<?php echo base_url().'index.php/Welcome/dsr_cs_distribute_items';?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">ADD</a></td>
-        <td><td>
-        <td><td>
-        <td><td>
-        <td><td>
-</table></div>
+
             <div class="container"> 
                <center> <h1>Welcome to Distribution Details</h1> </center>
             </div>

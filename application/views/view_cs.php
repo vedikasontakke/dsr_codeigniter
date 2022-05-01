@@ -45,7 +45,7 @@
         <td><td>
         <td><td>
         <td><td>
-        <td><a href="<?php echo base_url().'index.php/Welcome/dsr_cs_distribute_view';?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">DISTRIBUTE</a></td>
+        <td><a href="<?php echo base_url().'index.php/Welcome/dsr_cs_distribute_view';?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">DISTRIBUTION DETAILS</a></td>
         <td><td>
         <td><td>
 </table></div>
@@ -79,6 +79,7 @@
                              <th>Bill</th>
                              <th>Dsr</th>
                              <th>Last Edited</th>
+                             <th>Distribute</th>
                          </tr>
 
                          <?php
@@ -105,8 +106,10 @@
   echo "<td>".$row->bill_pic."</td>";
   echo "<td>".$row->dsr_pic."</td>";
   echo "<td>".$row->last_edited."</td>";
+  ?>
+  <td><a href="<?php echo base_url().'index.php/Welcome/dsr_cs_distribute_items';?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">DISTRIBUTE</a></td>
 
-
+<?php
   echo "</tr>";
   $i++;
   }

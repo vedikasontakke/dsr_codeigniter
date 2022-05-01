@@ -31,7 +31,31 @@ class Welcome extends CI_Controller {
 	/*load Model*/
 	$this->load->model('Dsr_model');
 	}
-	
+/*
+	public function index() { 
+		$this->load->view('upload_form', array('error' => ' ' )); 
+	 }
+
+	 public function do_upload() { 
+		$config['upload_path']   = './uploads/'; 
+		$config['allowed_types'] = 'gif|jpg|png'; 
+		$config['max_size']      = 1024; 
+		$config['max_width']     = 1024; 
+		$config['max_height']    = 1200;  
+		$this->load->library('upload', $config);
+		   
+		if ( ! $this->upload->do_upload('userfile')) {
+		   $error = array('error' => $this->upload->display_errors()); 
+		   $this->load->view('upload_form', $error); 
+		}
+		   
+		else { 
+		   $data = array('upload_data' => $this->upload->data());
+
+		   echo "File uploaded Successfully!";
+		} 
+   } 
+*/	
 	public function index()
 	{
 		$this->load->view('main');
@@ -39,22 +63,13 @@ class Welcome extends CI_Controller {
 
 	public function dsr_cs()
 	{
-		/*
-		$this->load->model('Dsr_module');
-        $master_cs = $this->Dsr_module->all();
-        $data = array();
-        $data['master_cs'] = $master_cs;
-        */
-	
 		$result['data']=$this->Dsr_model->display_master_cs();
 		$this->load->view('view_cs',$result);
-		//$this->load->view('view_cs');
 	}
 
 	public function dept_dsr()
 	{
 		$this->load->view('dept_dsr');
-		//$result['data']=$this->Dsr_model->get_comp_dsr();
 
 	}
 	public function dept_view()
@@ -80,7 +95,31 @@ class Welcome extends CI_Controller {
 
 	public function dsr_cs_add()
 	{
-		$this->load->view('dsr_cs_add');
+		//$this->load->view('dsr_cs_add');
+
+		$this->load->model('Dsr_model');
+        $this->form_validation->set_rules('Oraganization_ID','Oraganization ID','required|alpha_numeric');
+        $this->form_validation->set_rules('DSR_no','DSR No.','required|integer');
+        $this->form_validation->set_rules('Product_ID','Product ID','required|is_unique[master_cs.Product_ID]|integer');
+        $this->form_validation->set_rules('purchase_date','purchase date','required');
+        $this->form_validation->set_rules('purchase_authority','Choose Authority','required');
+        $this->form_validation->set_rules('supplier_name','Supplier Name','required');
+        $this->form_validation->set_rules('Supplier_Address','Supplier Address','required');
+        $this->form_validation->set_rules('product_name','Product Name','required');
+        $this->form_validation->set_rules('product_desc','Product Description','required');
+        $this->form_validation->set_rules('qty','Quantity','required|integer');
+        $this->form_validation->set_rules('Price_Per_Quantity','Price Per Quantity','required|numeric');
+        $this->form_validation->set_rules('price','Total Price','required|numeric');
+        $this->form_validation->set_rules('initial_HOD','Purchase Authority','required');
+        $this->form_validation->set_rules('Quantity_Distributed','Quantity Distributed','required|integer');
+        $this->form_validation->set_rules('stamp_sign_cs','Stamp / Sign of Central Store:','required|is_unique[master_cs.stamp_sign_cs]');
+        $this->form_validation->set_rules('qty_remaining','Quantity Remaining','required|integer');
+        $this->form_validation->set_rules('bill_pic','Bill Photo','required|is_unique[master_cs.bill_pic]');
+        $this->form_validation->set_rules('dsr_pic','DSR Photo','required|is_unique[master_cs.dsr_pic]');
+        if($this->form_validation->run() == false){
+            $this->load->view('dsr_cs_add');
+        }
+        else{
 
 		if($this->input->post('submit'))
 		{
@@ -114,6 +153,7 @@ class Welcome extends CI_Controller {
 			}
 		}
 	}
+	}
 
 	public function dsr_cs_distribute_view()
 	{
@@ -123,10 +163,23 @@ class Welcome extends CI_Controller {
 
 	public function dsr_cs_distribute_items()
 	{
-		$this->load->view('distribute_items');
+		//$this->load->view('distribute_items');
+		$this->load->model('Dsr_model');
 
-		if($this->input->post('submit'))
+        $this -> form_validation -> set_rules('Product_ID' ,'Product ID' ,'required|integer');
+        $this -> form_validation -> set_rules('qty_distributed' ,'Quantity Distributed' ,'required|integer');
+		$this -> form_validation -> set_rules('qty_remaining' ,'Quantity Remaining' ,'required|integer');
+        $this -> form_validation -> set_rules('date_distributed' ,'Date Distributed' ,'required');
+		$this -> form_validation -> set_rules('head_initials' ,'Head Initials' ,'required');
+        $this -> form_validation -> set_rules('stamp_of_initials' ,'Stamp Of Initials' ,'required|is_unique[cs_distribution.stamp_of_initials]');
+
+        if($this->form_validation->run() == false)
 		{
+            $this->load->view('distribute_items');
+        }else
+		{
+	     	if($this->input->post('submit'))
+		  {
 		    $data['Product_ID']=$this->input->post('Product_ID');
 			$data['qty_distributed']=$this->input->post('qty_distributed');
 			$data['qty_remaining']=$this->input->post('qty_remaining');
@@ -144,7 +197,8 @@ class Welcome extends CI_Controller {
 			else{
 					echo "Insert error !";
 			}
-		}
+		  }
+	    }
 	}
 
 }
