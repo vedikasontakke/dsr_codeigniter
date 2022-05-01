@@ -35,7 +35,6 @@ class Welcome extends CI_Controller {
 	public function index() { 
 		$this->load->view('upload_form', array('error' => ' ' )); 
 	 }
-
 	 public function do_upload() { 
 		$config['upload_path']   = './uploads/'; 
 		$config['allowed_types'] = 'gif|jpg|png'; 
@@ -51,7 +50,6 @@ class Welcome extends CI_Controller {
 		   
 		else { 
 		   $data = array('upload_data' => $this->upload->data());
-
 		   echo "File uploaded Successfully!";
 		} 
    } 

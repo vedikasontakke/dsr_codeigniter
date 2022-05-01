@@ -29,6 +29,72 @@
             background-color: #dee9ff;
             }
     </style>
+    </br>
+          </br>
+<div><table align = "right">
+<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Request Product</button></td>
+<td><td>
+        <td><td>
+        <td><td>
+        <td><td>
+</table></div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Send Request</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+        <div class="form-group">
+            <label for="recipient-name" class="col-form-label">From:</label>
+            <textbox class="form-control" id="message-text"><?php echo $_GET['dept']; ?></textbox>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <select name="head_initials" class="form-control item"  id="head_initials">
+                    <option value="computer">Computer</option>
+                    <option value="civil">Civil</option>
+                    <option value="electrical">Electrical</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="mechanical">Mechanical</option>
+                    <option value="IT">IT</option>
+                    <option value="pharmacy">Pharmacy</option>
+                    <option value="chemical">Chemical</option>
+                    <option value="plastic_polymer">Plastic Polymer</option>
+                    <option value="girls_hostel1">Girls Hostel</option>
+                    <option value="boys_hostel">Boys Hostel</option>
+                    <option value="office">Office</option>
+                    <option value="library">Library</option>
+
+                  </select>
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Details:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+
+          
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 </br>
             <div class="container"> 
                <center> <h1><?php 
@@ -65,10 +131,13 @@
   echo "<td>".$row->head_initials."</td>";
   echo "<td>".$row->stamp_of_initials."</td>";
   
+
+
   echo "</tr>";
   $i++;
   }
    ?>
+
                 </thead> 
 </div>
         </div>
