@@ -33,6 +33,12 @@ class Dsr_model extends CI_Model {
     return true;
 
   }
+
+  function view_notification()
+  {
+    $query=$this->db->get("notification_table");
+    return $query->result();
+  }
 }
   
 ?>

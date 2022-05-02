@@ -89,7 +89,8 @@
  
   echo "<td>".$row->Oraganization_ID."</td>";
   echo "<td>".$row->DSR_no."</td>";
-  echo "<td>".$row->Product_ID."</td>";
+  $a=$row->Product_ID;
+  echo "<td>".$a."</td>";
   echo "<td>".$row->purchase_date."</td>";
   echo "<td>".$row->purchase_authority."</td>";
   echo "<td>".$row->supplier_name."</td>";
@@ -107,7 +108,7 @@
   echo "<td>".$row->dsr_pic."</td>";
   echo "<td>".$row->last_edited."</td>";
   ?>
-  <td><a href="<?php echo base_url().'index.php/Welcome/dsr_cs_distribute_items';?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">DISTRIBUTE</a></td>
+  <td><a href="<?php echo base_url().'index.php/Welcome/dsr_cs_distribute_items?product_id='.$a.'';$_GET?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">DISTRIBUTE</a></td>
 
 <?php
   echo "</tr>";

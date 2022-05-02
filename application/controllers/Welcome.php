@@ -164,7 +164,6 @@ class Welcome extends CI_Controller {
 		//$this->load->view('distribute_items');
 		$this->load->model('Dsr_model');
 
-        $this -> form_validation -> set_rules('Product_ID' ,'Product ID' ,'required|integer');
         $this -> form_validation -> set_rules('qty_distributed' ,'Quantity Distributed' ,'required|integer');
 		$this -> form_validation -> set_rules('qty_remaining' ,'Quantity Remaining' ,'required|integer');
         $this -> form_validation -> set_rules('date_distributed' ,'Date Distributed' ,'required');
@@ -197,6 +196,12 @@ class Welcome extends CI_Controller {
 			}
 		  }
 	    }
+	}
+
+	public function notification()
+	{
+		$result['data']=$this->Dsr_model->view_notification();
+		$this->load->view('notification',$result);
 	}
 
 }

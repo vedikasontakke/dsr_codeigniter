@@ -18,9 +18,9 @@
             <!--<div class="form-icon">
                 <span><i class="icon icon-user"></i></span>
             </div>-->
+            <label>&nbsp &nbsp Product ID</label>
             <div class="form-group">
-                <input type="text" class="form-control item" name= "Product_ID" id="Product_ID" placeholder="Product ID">
-                <?php echo form_error('Product_ID');?>
+                <input type="text"  class="form-control item" name= "Product_ID" id="Product_ID" placeholder="Product ID" value="<?php echo $_GET['product_id'];?>" readonly>
 
             </div>
 
