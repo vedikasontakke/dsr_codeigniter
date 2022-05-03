@@ -22,7 +22,7 @@
             }
     </style>
   <div><table align = "left">
-<td><a href="<?php echo base_url().'index.php/Welcome/';?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">Back</a></td>
+<td><a href="<?php echo base_url().'index.php/Dsr_controller_folder/Dsr_controller/';?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">Back</a></td>
 <td><td>
         <td><td>
         <td><td>
@@ -35,7 +35,7 @@
   <center>
   <div class="row">
         <div class="col-sm-6">
-    <a href = "<?php echo base_url().'index.php/Welcome/dept_view?dept=Girls hostel';$_GET?>">
+    <a href = "<?php echo base_url().'index.php/Dsr_controller_folder/Dsr_controller/dept_view?dept=Girls hostel';$_GET?>">
       <div class="card bg-dark text-white bg-opacity-40 " style="width: 30rem; height: 15rem; display: inline-block">
         <div class="card-body">
           <font face="Tamoha" size="6px" color="white">Girls Hostel</font><br><br>
@@ -49,7 +49,7 @@
 
         <div class="col-sm-6">
     
-    <a href = "<?php echo base_url().'index.php/Welcome/dept_view?dept=Boys hostel';$_GET?>">
+    <a href = "<?php echo base_url().'index.php/Dsr_controller_folder/Dsr_controller/dept_view?dept=Boys hostel';$_GET?>">
       <div class="card bg-dark text-white bg-opacity-40 " style="width: 30rem; height: 15rem; display: inline-block">
         <div class="card-body">
           <font face="Tamoha" size="6px" color="white">Boys Hostel</font><br><br>

@@ -32,7 +32,7 @@
     </br>
           </br>
      <div><table align = "left">
-<td><a href="<?php echo base_url().'index.php/Welcome/';?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">Back</a></td>
+<td><a href="<?php echo base_url().'index.php/Dsr_controller_folder/Dsr_controller/';?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">Back</a></td>
 <td><td>
         <td><td>
         <td><td>
@@ -144,7 +144,7 @@
   echo "<td>".$row->head_initials."</td>";
   echo "<td>".$row->stamp_of_initials."</td>";
   ?>
-  <td><a href="<?php echo base_url().'index.php/Welcome/transfer_items?product_id='.$a.'';$_GET?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">TRANSFER</a></td>
+  <td><a href="<?php echo base_url().'index.php/Dsr_controller_folder/Dsr_controller/transfer_items?product_id='.$a.'';$_GET?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">TRANSFER</a></td>
   
   <?php
 

@@ -39,7 +39,7 @@
 </br>
           </br>
  <div><table align = "left">
-<td><a href="<?php echo base_url().'index.php/Welcome/';?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">Back</a></td>
+<td><a href="<?php echo base_url().'index.php/Dsr_controller_folder/Dsr_controller/';?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">Back</a></td>
 <td><td>
         <td><td>
         <td><td>
@@ -57,7 +57,7 @@
         
     <div class="row">
         <div class="col-sm-4">
-          <a href="<?php echo base_url().'index.php/Welcome/dept_view?dept=Computer';$_GET?>">
+          <a href="<?php echo base_url().'index.php/Dsr_controller_folder/Dsr_controller/dept_view?dept=Computer';$_GET?>">
           <div class="card bg-dark text-white bg-opacity-40  " style="width: 30rem; display: inline-block" >
             <div class="card-body">
               <b><h3 class="card-title">Computer</h3></b>
@@ -70,7 +70,7 @@
     </br></br>
     
         <div class="col-sm-4">
-          <a href="<?php echo base_url().'index.php/Welcome/dept_view?dept=IT';$_GET?>">
+          <a href="<?php echo base_url().'index.php/Dsr_controller_folder/Dsr_controller/dept_view?dept=IT';$_GET?>">
           <div class="card bg-dark text-white bg-opacity-40 " style="width: 30rem; display: inline-block" >
             <div class="card-body">
              <b><h3 class="card-title">IT</h3></b> 
@@ -81,7 +81,7 @@
         </div>
 
         <div class="col-sm-4">
-          <a href="<?php echo base_url().'index.php/Welcome/dept_view?dept=Mechanical';$_GET?>">
+          <a href="<?php echo base_url().'index.php/Dsr_controller_folder/Dsr_controller/dept_view?dept=Mechanical';$_GET?>">
             <div class="card bg-dark text-white bg-opacity-40 " style="width: 30rem; display: inline-block" >
               <div class="card-body">
                 <b><h3 class="card-title">Mechanical</h3></b>
@@ -97,7 +97,7 @@
     </br>
       <div class="row">
       <div class="col-sm-4">
-        <a href="<?php echo base_url().'index.php/Welcome/dept_view?dept=Civil';$_GET?>">
+        <a href="<?php echo base_url().'index.php/Dsr_controller_folder/Dsr_controller/dept_view?dept=Civil';$_GET?>">
         <div class="card bg-dark text-white bg-opacity-40 " style="width: 30rem; display: inline-block" >
           <div class="card-body">
            <b><h3 class="card-title">Civil</h3></b> 
@@ -108,7 +108,7 @@
       </div>
     
       <div class="col-sm-4">
-        <a href="<?php echo base_url().'index.php/Welcome/dept_view?dept=Electrical';$_GET?>">
+        <a href="<?php echo base_url().'index.php/Dsr_controller/dept_view?dept=Electrical';$_GET?>">
         <div class="card bg-dark text-white bg-opacity-40 " style="width: 30rem; display: inline-block" >
           <div class="card-body">
             <b><h3 class="card-title">Electrical</h3></b>
@@ -118,7 +118,7 @@
       </a>
       </div>
       <div class="col-sm-4">
-        <a href="<?php echo base_url().'index.php/Welcome/dept_view?dept=Electronics';$_GET?>">
+        <a href="<?php echo base_url().'index.php/Dsr_controller_folder/Dsr_controller/dept_view?dept=Electronics';$_GET?>">
           <div class="card bg-dark text-white bg-opacity-40 " style="width: 30rem; display: inline-block" >
             <div class="card-body">
              <b><h3 class="card-title">Electronics</h3></b> 
@@ -133,7 +133,7 @@
 
     <div class="row">
         <div class="col-sm-4">
-          <a href="<?php echo base_url().'index.php/Welcome/dept_view?dept=Pharmacy';$_GET?>">
+          <a href="<?php echo base_url().'index.php/Dsr_controller/dept_view?dept=Pharmacy';$_GET?>">
           <div class="card bg-dark text-white bg-opacity-40 " style="width: 30rem; display: inline-block" >
             <div class="card-body">
              <b><h3 class="card-title">Pharmacy</h3></b> 
@@ -144,7 +144,7 @@
         </div>
 
         <div class="col-sm-4">
-          <a href="<?php echo base_url().'index.php/Welcome/dept_view?dept=Chemical';$_GET?>">
+          <a href="<?php echo base_url().'index.php/Dsr_controller_folder/Dsr_controller/dept_view?dept=Chemical';$_GET?>">
           <div class="card bg-dark text-white bg-opacity-40 " style="width: 30rem; display: inline-block" >
             <div class="card-body">
             <b><h3 class="card-title">Chemical</h3></b>  
@@ -155,7 +155,7 @@
         </div>
 
         <div class="col-sm-4">
-          <a href="<?php echo base_url().'index.php/Welcome/dept_view?dept=Plastic Polymer';$_GET?>">
+          <a href="<?php echo base_url().'index.php/Dsr_controller_folder/Dsr_controller/dept_view?dept=Plastic Polymer';$_GET?>">
             <div class="card bg-dark text-white bg-opacity-40 " style="width: 30rem; display: inline-block" >
               <div class="card-body">
                <b><h3 class="card-title">Plastic Polymer</h3></b> 

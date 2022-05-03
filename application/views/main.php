@@ -36,12 +36,12 @@
                               Select DSR
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                              <li><a class="dropdown-item" href="<?php echo base_url().'index.php/Welcome/dsr_cs';?>">Central Store DSR</a></li>
-                              <li><a class="dropdown-item" href="<?php echo base_url().'index.php/Welcome/dept_dsr';?>">Department DSR</a></li>
-                              <li><a class="dropdown-item" href="<?php echo base_url().'index.php/Welcome/hostel_dsr';?>">Hostels DSR</a></li>
-                              <li><a class="dropdown-item" href="<?php echo base_url().'index.php/Welcome/dept_view?dept=Library';$_GET?>">Library DSR</a></li>
-                              <li><a class="dropdown-item" href="<?php echo base_url().'index.php/Welcome/dept_view?dept=Office';$_GET?>">Office DSR</a></li>
-                              <li><a class="dropdown-item" href="<?php echo base_url().'index.php/Welcome/notification?msg=Your Requested product is Transferred';$_GET?>">Notifications</a></li>
+                              <li><a class="dropdown-item" href="<?php echo base_url().'index.php/Dsr_controller_folder/Dsr_controller/dsr_cs';?>">Central Store DSR</a></li>
+                              <li><a class="dropdown-item" href="<?php echo base_url().'index.php/Dsr_controller_folder/Dsr_controller/dept_dsr';?>">Department DSR</a></li>
+                              <li><a class="dropdown-item" href="<?php echo base_url().'index.php/Dsr_controller_folder/Dsr_controller/hostel_dsr';?>">Hostels DSR</a></li>
+                              <li><a class="dropdown-item" href="<?php echo base_url().'index.php/Dsr_controller_folder/Dsr_controller/dept_view?dept=Library';$_GET?>">Library DSR</a></li>
+                              <li><a class="dropdown-item" href="<?php echo base_url().'index.php/Dsr_controller_folder/Dsr_controller/dept_view?dept=Office';$_GET?>">Office DSR</a></li>
+                              <li><a class="dropdown-item" href="<?php echo base_url().'index.php/Dsr_controller_folder/Dsr_controller/notification?msg=Your Requested product is Transferred';$_GET?>">Notifications</a></li>
                               
                             </ul>
                           

@@ -31,7 +31,7 @@
     </style>
 </br>
 <div><table align = "left">
-<td><a href="<?php echo base_url().'index.php/Welcome/dsr_cs';?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">Back</a></td>
+<td><a href="<?php echo base_url().'index.php/Dsr_controller_folder/Dsr_controller/dsr_cs';?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">Back</a></td>
 <td><td>
         <td><td>
         <td><td>
@@ -66,7 +66,7 @@
   echo "<td>".$row->date_distributed."</td>";
   echo "<td>".$row->head_initials."</td>";
   echo "<td>".$row->stamp_of_initials."</td>";
-  //echo "<td>".<a href="<?php echo base_url().'index.php/Welcome/distribute_items/' >" class="btn btn-primary">Edit</a>"</td>"
+  //echo "<td>".<a href="<?php echo base_url().'index.php/Dsr_controller_folder/Dsr_controller/distribute_items/' >" class="btn btn-primary">Edit</a>"</td>"
 
   echo "</tr>";
   $i++;

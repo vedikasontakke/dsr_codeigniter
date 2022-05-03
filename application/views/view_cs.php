@@ -41,18 +41,18 @@
     
 </br>
 <div><table align = "left">
-<td><a href="<?php echo base_url().'index.php/Welcome/';?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">Back</a></td>
+<td><a href="<?php echo base_url().'index.php/Dsr_controller_folder/Dsr_controller/';?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">Back</a></td>
 <td><td>
         <td><td>
         <td><td>
 </table>
 </div>
 <div><table align = "right">
-        <td><a href="<?php echo base_url().'index.php/Welcome/dsr_cs_add';?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">ADD</a></td>
+        <td><a href="<?php echo base_url().'index.php/Dsr_controller_folder/Dsr_controller/dsr_cs_add';?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">ADD</a></td>
         <td><td>
         <td><td>
         <td><td>
-        <td><a href="<?php echo base_url().'index.php/Welcome/dsr_cs_distribute_view';?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">DISTRIBUTION DETAILS</a></td>
+        <td><a href="<?php echo base_url().'index.php/Dsr_controller_folder/Dsr_controller/dsr_cs_distribute_view';?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">DISTRIBUTION DETAILS</a></td>
         <td><td>
         <td><td>
 </table></div>
@@ -115,7 +115,7 @@
   echo "<td>".$row->dsr_pic."</td>";
   echo "<td>".$row->last_edited."</td>";
   ?>
-  <td><a href="<?php echo base_url().'index.php/Welcome/dsr_cs_distribute_items?product_id='.$a.'';$_GET?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">DISTRIBUTE</a></td>
+  <td><a href="<?php echo base_url().'index.php/Dsr_controller_folder/Dsr_controller/dsr_cs_distribute_items?product_id='.$a.'';$_GET?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">DISTRIBUTE</a></td>
 
 <?php
   echo "</tr>";

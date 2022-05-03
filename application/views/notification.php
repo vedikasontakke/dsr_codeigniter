@@ -37,7 +37,7 @@
   echo "<td>".$msgFrom."</td>";
 
  
-  //echo "<td>".<a href="<?php echo base_url().'index.php/Welcome/distribute_items/' >" class="btn btn-primary">Edit</a>"</td>"
+  //echo "<td>".<a href="<?php echo base_url().'index.php/Dsr_controller_folder/Dsr_controller/distribute_items/' >" class="btn btn-primary">Edit</a>"</td>"
 ?>
      
               

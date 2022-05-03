@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Dsr_controller extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -72,7 +72,7 @@ class Welcome extends CI_Controller {
 
 					$d = $_GET['dept'];
 		
-					redirect(base_url().'index.php/Welcome/dept_view?dept='.$d.'');
+					redirect(base_url().'index.php/Dsr_controller_folder/Dsr_controller/dept_view?dept='.$d.'');
 			}
 			else{
 					echo "Insert error !";
@@ -147,7 +147,7 @@ class Welcome extends CI_Controller {
 			$response=$this->Dsr_model->add_cs($data);
 			if($response==true){
 			        echo "Records Saved Successfully";
-					redirect(base_url().'index.php/Welcome/dsr_cs');
+					redirect(base_url().'index.php/Dsr_controller_folder/Dsr_controller/dsr_cs');
 
 			}
 			else{
@@ -191,7 +191,7 @@ class Welcome extends CI_Controller {
 			if($response==true){
 				
 			        echo "Records Saved Successfully";
-					redirect(base_url().'index.php/Welcome/dsr_cs_distribute_view');
+					redirect(base_url().'index.php/Dsr_controller_folder/Dsr_controller/dsr_cs_distribute_view');
 
 			}
 			else{
@@ -254,7 +254,7 @@ class Welcome extends CI_Controller {
 			if($response==true){
 				
 			        echo "Records Saved Successfully";
-				//	redirect(base_url().'index.php/Welcome/dsr_cs_distribute_view');
+				//	redirect(base_url().'index.php/Dsr_controller_folder/Dsr_controller/dsr_cs_distribute_view');
 
 			}
 			else{
