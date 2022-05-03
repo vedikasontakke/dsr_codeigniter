@@ -42,7 +42,8 @@
             <div class="form-group">
             <label>&nbsp &nbsp Choose Authority</label>
                       <select  class="form-control item" name="purchase_authority" id="purchase_authority" placeholder="Choose Authority" >
-                        <option value="Principal">Principal</option>
+                      <option value="select">--select--</option>
+                      <option value="Principal">Principal</option>
                         <option value="DTE">DTE</option>
                         <option value="JD">JD</option>
                       </select>
@@ -95,6 +96,7 @@
             <div class="form-group">
             <label>&nbsp &nbsp Initial of HOD</label>
                 <select name="initial_HOD" class="form-control item" name="initial_HOD" id="initial_HOD" placeholder="Initial Of HOD">
+                    <option value="select">--select--</option>
                     <option value="computer">Computer</option>
                     <option value="civil">Civil</option>
                     <option value="electrical">Electrical</option>
@@ -132,7 +134,6 @@
 
             </div>
 
-            
             <div class="form-group">
                 <input type="text" class="form-control item" name="qty_remaining" id="qty_remaining" placeholder="Quantity Remaining">
                 <?php echo form_error('qty_remaining');?>

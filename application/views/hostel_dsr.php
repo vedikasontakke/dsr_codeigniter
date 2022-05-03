@@ -21,7 +21,13 @@
             background-color: #dee9ff;
             }
     </style>
-  
+  <div><table align = "left">
+<td><a href="<?php echo base_url().'index.php/Welcome/';?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">Back</a></td>
+<td><td>
+        <td><td>
+        <td><td>
+</table>
+</div>
     <center>
     <h1><font face = "Tamoha" font-size = "5px" </font>Welcome to Hostel DSR</h1>
 </br></br>

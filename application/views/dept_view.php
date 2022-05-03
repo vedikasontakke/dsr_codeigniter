@@ -31,6 +31,15 @@
     </style>
     </br>
           </br>
+     <div><table align = "left">
+<td><a href="<?php echo base_url().'index.php/Welcome/';?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">Back</a></td>
+<td><td>
+        <td><td>
+        <td><td>
+</table>
+</div>
+    </br>
+          </br>
 <div><table align = "right">
 <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Request Product</button></td>
 <td><td>
@@ -38,7 +47,6 @@
         <td><td>
         <td><td>
 </table></div>
-
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -49,14 +57,15 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form method="post" action="" enctype="multipart/formdata">
         <div class="form-group">
             <label for="recipient-name" class="col-form-label">From:</label>
-            <textbox class="form-control" id="message-text"><?php echo $_GET['dept']; ?></textbox>
+            <input class="form-control" name="msg_from" id="msg_from" ></input>
           </div>
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Recipient:</label>
-            <select name="head_initials" class="form-control item"  id="head_initials">
+            <select name="msg_to" id="msg_to" class="form-control item"  id="msg_to">
+                    <option value="select">--select--</option>
                     <option value="computer">Computer</option>
                     <option value="civil">Civil</option>
                     <option value="electrical">Electrical</option>
@@ -75,20 +84,21 @@
           </div>
           <div class="form-group">
             <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <textarea class="form-control" name="message" id="message"></textarea>
           </div>
           <div class="form-group">
             <label for="message-text" class="col-form-label">Details:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <textarea class="form-control" name="view_details" id="view_details"></textarea>
           </div>
 
           
-        </form>
+        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
+        <button type="submit" class="btn btn-primary" value="submit" name="submit" id="submit">Send Request</button>
       </div>
+      </form>
     </div>
   </div>
 </div>
@@ -117,6 +127,7 @@
                         <th scope="col">Date Distributed</th>
                         <th scope="col">Head Office Initials</th>
                         <th scope="col">Stamp of Initial</th>
+                        <th scope="col">Transfer</th>
                     </tr>
 
                     <?php
@@ -124,19 +135,23 @@
   foreach($data as $row)
   {
  
-  echo "<td>".$row->Product_ID."</td>";
+ //echo "<td>".$row->Product_ID."</td>";
+  $a=$row->Product_ID;
+  echo "<td>".$a."</td>";
   echo "<td>".$row->qty_distributed."</td>";
   echo "<td>".$row->qty_remaining."</td>";
   echo "<td>".$row->date_distributed."</td>";
   echo "<td>".$row->head_initials."</td>";
   echo "<td>".$row->stamp_of_initials."</td>";
+  ?>
+  <td><a href="<?php echo base_url().'index.php/Welcome/transfer_items?product_id='.$a.'';$_GET?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">TRANSFER</a></td>
   
-
+  <?php
 
   echo "</tr>";
   $i++;
   }
-   ?>
+?> 
 
                 </thead> 
 </div>

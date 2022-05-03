@@ -8,13 +8,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Notification</title>
   </head>
   <body>
  
     <div class=" shadow-sm card-task p-3">
       <center> <h4>Notifications</h4></center>
-     
+</br>
       <table class="table">
           <thead>
               <tr>
@@ -22,14 +22,29 @@
                   <th scope="col">Message</th>
                   <th scope="col">Message From</th>
                   <th scope="col">View Details</th>
+                  <th scope="col">Delete</th>
               </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <th scope="row">1</th>
-                  <td>Computer Department has requested for 5 Coolers for 3rd yr class</td>
-                  <td>CM HOD</td>
-                  <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">View Details</button>
+
+              <?php
+  $i=1;
+  foreach($data as $row)
+  {
+  $srNO = $row->sr_no;
+  echo "<td>".$srNO."</td>";
+  $msg = $row->message;
+  echo "<td>".$msg."</td>";
+  $msgFrom = $row->msg_from;
+  echo "<td>".$msgFrom."</td>";
+
+ 
+  //echo "<td>".<a href="<?php echo base_url().'index.php/Welcome/distribute_items/' >" class="btn btn-primary">Edit</a>"</td>"
+?>
+     
+              
+           
+                  
+                  
+                  <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">View Details</button></td>
                   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
@@ -44,12 +59,12 @@
                           <form>
                           <div class="form-group">
                               <label for="recipient-name" class="col-form-label">From:</label>
-                              <textbox class="form-control" id="message-text">Computer</textbox>
+                              <textbox class="form-control" id="message-text" value ="<?php $msgFrom ?>" ></textbox>
                             </div>
                             
                             <div class="form-group">
                               <label for="message-text" class="col-form-label">Message:</label>
-                              <textarea class="form-control" id="message-text"></textarea>
+                              <textarea class="form-control" id="message-text" value = "<?php $msg ?>"></textarea>
                             </div>
                             <div class="form-group">
                               <label for="message-text" class="col-form-label">Details:</label>
@@ -67,9 +82,17 @@
                   </div>
                   
                 </td>
-              </tr>
+                <a >
+                <td><button  type="button" class="btn btn-danger" name="delete">DELETE</button></td>
+                </a>
              
-          </tbody>
+          
+
+        <?php 
+  echo "</tr>";
+  $i++;
+  }
+   ?> 
       </table>
   </div>
     <!-- Optional JavaScript -->

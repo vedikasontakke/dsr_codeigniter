@@ -13,8 +13,8 @@
     
     <div class="registration-form">
         
-        <form action="" method="post" enctype="multipart/formdata">
-           <center><h3> ADD DISTRIBUTED ITEM DETAILS </h3></center> </br>
+        <form action="" method="post"  enctype="multipart/formdata">
+           <center><h3> ADD TRANSFER ITEM DETAILS </h3></center> </br>
             <!--<div class="form-icon">
                 <span><i class="icon icon-user"></i></span>
             </div>-->
@@ -25,25 +25,25 @@
             </div>
 
             <div class="form-group">
-                <input type="text" class="form-control item" name= "qty_distributed" id="qty_distributed" placeholder="Quantity to be Distributed">
+                <input type="text" class="form-control item" name= "qty_transferr" id="qty_transferr" placeholder="Quantity To Be Transfered">
                 <?php echo form_error('qty_distributed');?>
 
             </div>
 
-            <div class="form-group">
-                <input type="text" class="form-control item" name= "qty_remaining" id="qty_remaining" placeholder="Quantity Remaining">
-                <?php echo form_error('qty_remaining');?>
-
-            </div>
+            
 
             <div class="form-group">
-                <input type="date" class="form-control item" name= "date_distributed" id="date_distributed" placeholder="Date of Distributed">
+                <input type="date" class="form-control item" name= "transfer_date" id="transfer_date" placeholder="Date of Distributed">
                 <?php echo form_error('date_distributed');?>
 
             </div>
 
+
+
             <div class="form-group">
-                <select name="head_initials" class="form-control item"  id="head_initials">
+            <label>&nbsp &nbsp Transfer To</label>
+                <select name="transfer_to" class="form-control item"  id="transfer_to">
+                    <option value="select">--select--</option>
                     <option value="computer">Computer</option>
                     <option value="civil">Civil</option>
                     <option value="electrical">Electrical</option>
@@ -62,8 +62,35 @@
                   </select>
 
             </div>
-
+            
             <div class="form-group">
+            <label>&nbsp &nbsp Transfer From</label>
+                <select name="transfer_from" class="form-control item"  id="transfer_from">
+                 <option value="select">--select--</option>
+                    <option value="computer">Computer</option>
+                    <option value="civil">Civil</option>
+                    <option value="electrical">Electrical</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="mechanical">Mechanical</option>
+                    <option value="IT">IT</option>
+                    <option value="pharmacy">Pharmacy</option>
+                    <option value="chemical">Chemical</option>
+                    <option value="plastic_polymer">Plastic Polymer</option>
+                    <option value="girls_hostel1">Girls Hostel</option>
+                    <option value="boys_hostel">Boys Hostel</option>
+                    <option value="office">Office</option>
+                    <option value="library">Library</option>
+                    <?php echo form_error('head_initials');?>
+
+                  </select>
+
+            </div>
+            <div class="form-group">
+                <textarea type="text" class="form-control item" name= "msg" id="msg" placeholder="Message"></textarea>
+                <?php echo form_error('msg');?>
+            </div>
+
+        <!--    <div class="form-group">
             
             <label>&nbsp &nbsp DSR Photo:</label>
             <link rel="stylesheet" type= "text/css" href ="<?php echo base_url('/assets/css/style.css');?>"/>
@@ -71,13 +98,14 @@
 
             <form method="POST" action="" enctype="multipart/form-data">
             <input type="file" class="form-control item" name="stamp_of_initials"  value=""/>
-            <?php echo form_error('stamp_of_initials');?>
+        //    <?php echo form_error('stamp_of_initials');?>
 
         </div>
+-->
 
         <div class="form-group" 
 >
-                <input type="submit" id="submit" name="submit" class="btn btn-block create-account" value="Submit">
+                <input type="submit" id="submit" name="submit" class="btn btn-block create-account" value="submit">
         </div>
         
         </form>

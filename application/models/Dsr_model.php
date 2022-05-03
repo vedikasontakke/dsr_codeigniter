@@ -38,7 +38,26 @@ class Dsr_model extends CI_Model {
   {
     $query=$this->db->get("notification_table");
     return $query->result();
+
   }
+
+  function send_request($data)
+  {
+    $this->db->insert('notification_table' , $data);   
+    return true;
+
+  }
+
+  function transfer_insert($data){
+    $this->db->insert('transfer_table' , $data);   
+    return true;
+  }
+
+  function notification_details($data)
+  {
+
+  }
+
 }
   
 ?>

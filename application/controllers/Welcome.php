@@ -31,29 +31,7 @@ class Welcome extends CI_Controller {
 	/*load Model*/
 	$this->load->model('Dsr_model');
 	}
-/*
-	public function index() { 
-		$this->load->view('upload_form', array('error' => ' ' )); 
-	 }
-	 public function do_upload() { 
-		$config['upload_path']   = './uploads/'; 
-		$config['allowed_types'] = 'gif|jpg|png'; 
-		$config['max_size']      = 1024; 
-		$config['max_width']     = 1024; 
-		$config['max_height']    = 1200;  
-		$this->load->library('upload', $config);
-		   
-		if ( ! $this->upload->do_upload('userfile')) {
-		   $error = array('error' => $this->upload->display_errors()); 
-		   $this->load->view('upload_form', $error); 
-		}
-		   
-		else { 
-		   $data = array('upload_data' => $this->upload->data());
-		   echo "File uploaded Successfully!";
-		} 
-   } 
-*/	
+
 	public function index()
 	{
 		$this->load->view('main');
@@ -74,6 +52,32 @@ class Welcome extends CI_Controller {
 	{
 		$result['data']=$this->Dsr_model->get_comp_dsr();
 		$this->load->view('dept_view' ,$result);
+
+		$this->load->model('Dsr_model');
+
+     // if($this->input->post('request'))
+	 // {
+	    if($this->input->post('submit'))
+		  {
+		    $data['msg_from']=$this->input->post('msg_from');
+			$data['msg_to']=$this->input->post('msg_to');
+			$data['message']=$this->input->post('message');
+			$data['view_details']=$this->input->post('view_details');
+			
+			$response=$this->Dsr_model->send_request($data);
+			if($response==true){
+				echo "<script type='text/javascript'>alert('submitted successfully!')</script>";
+			        //echo "Records Saved Successfully";
+					//echo '<script>alert("Request Sent...!!!")</script>';
+
+					$d = $_GET['dept'];
+		
+					redirect(base_url().'index.php/Welcome/dept_view?dept='.$d.'');
+			}
+			else{
+					echo "Insert error !";
+			}
+		  }
 	}
 
 	public function hostel_dsr()
@@ -111,7 +115,7 @@ class Welcome extends CI_Controller {
         $this->form_validation->set_rules('initial_HOD','Purchase Authority','required');
         $this->form_validation->set_rules('Quantity_Distributed','Quantity Distributed','required|integer');
         $this->form_validation->set_rules('stamp_sign_cs','Stamp / Sign of Central Store:','required|is_unique[master_cs.stamp_sign_cs]');
-        $this->form_validation->set_rules('qty_remaining','Quantity Remaining','required|integer');
+       /* $this->form_validation->set_rules('qty_remaining','Quantity Remaining','required|integer');*/
         $this->form_validation->set_rules('bill_pic','Bill Photo','required|is_unique[master_cs.bill_pic]');
         $this->form_validation->set_rules('dsr_pic','DSR Photo','required|is_unique[master_cs.dsr_pic]');
         if($this->form_validation->run() == false){
@@ -152,7 +156,6 @@ class Welcome extends CI_Controller {
 		}
 	}
 	}
-
 	public function dsr_cs_distribute_view()
 	{
 		$result['data']=$this->Dsr_model->display_cs_distribution();
@@ -202,6 +205,64 @@ class Welcome extends CI_Controller {
 	{
 		$result['data']=$this->Dsr_model->view_notification();
 		$this->load->view('notification',$result);
+
+	
+		$this->load->model('Dsr_model');
+	
+
+	/*	if(empty($user)){
+
+			$this->session->set_flashdata('failure','Record not found in database');
+			redirect(base_url().'index.php/user/index');
+
+		}
+		*/
+		
+	//	$this->session->set_flashdata('success','Record deleted successfully');
+	//		redirect(base_url().'index.php/user/index');
+	// echo "record deleted sucessfully";
+
 	}
 
+	public function transfer_items()
+	{
+		//$this->load->view('distribute_items');
+		$this->load->model('Dsr_model');
+
+       // $this -> form_validation -> set_rules('Product_ID' ,'Product ID' ,'required|integer');
+	//	$this -> form_validation -> set_rules('qty_transferr' ,'Quantity to be Transfered' ,'required|integer');
+     //   $this -> form_validation -> set_rules('transfer_date' ,'Date Transfered' ,'required');
+	//	$this -> form_validation -> set_rules('transfer_to' ,'Transfer To' ,'required');
+     //   $this -> form_validation -> set_rules('transfer_from' ,'Transfer From' ,'required');
+       // $this -> form_validation -> set_rules('msg' ,'Message' ,'required');
+       // if($this->form_validation->run() == false)
+		//{
+            $this->load->view('transfer_view');
+			//echo "error";
+        //}else
+		//{
+	     	if($this->input->post('submit'))
+		  {
+		    $data['Product_ID']=$this->input->post('Product_ID');
+			$data['qty_transferr']=$this->input->post('qty_transferr');
+			$data['transfer_date']=$this->input->post('transfer_date');
+			$data['transfer_to']=$this->input->post('transfer_to');
+			$data['transfer_from']=$this->input->post('transfer_from');
+			$data['msg']=$this->input->post('msg');
+
+			$response=$this->Dsr_model->transfer_insert($data);
+			if($response==true){
+				
+			        echo "Records Saved Successfully";
+				//	redirect(base_url().'index.php/Welcome/dsr_cs_distribute_view');
+
+			}
+			else{
+					echo "Insert error !";
+			}
+		  }
+	   // }
+	}
+
+	
 }

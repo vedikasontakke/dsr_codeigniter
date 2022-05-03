@@ -40,6 +40,13 @@
     </style>
     
 </br>
+<div><table align = "left">
+<td><a href="<?php echo base_url().'index.php/Welcome/';?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">Back</a></td>
+<td><td>
+        <td><td>
+        <td><td>
+</table>
+</div>
 <div><table align = "right">
         <td><a href="<?php echo base_url().'index.php/Welcome/dsr_cs_add';?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">ADD</a></td>
         <td><td>

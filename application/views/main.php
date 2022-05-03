@@ -41,6 +41,7 @@
                               <li><a class="dropdown-item" href="<?php echo base_url().'index.php/Welcome/hostel_dsr';?>">Hostels DSR</a></li>
                               <li><a class="dropdown-item" href="<?php echo base_url().'index.php/Welcome/dept_view?dept=Library';$_GET?>">Library DSR</a></li>
                               <li><a class="dropdown-item" href="<?php echo base_url().'index.php/Welcome/dept_view?dept=Office';$_GET?>">Office DSR</a></li>
+                              <li><a class="dropdown-item" href="<?php echo base_url().'index.php/Welcome/notification?msg=Your Requested product is Transferred';$_GET?>">Notifications</a></li>
                               
                             </ul>
                           

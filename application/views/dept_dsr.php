@@ -36,7 +36,15 @@
             background-color: #dee9ff;
             }
     </style>
- 
+</br>
+          </br>
+ <div><table align = "left">
+<td><a href="<?php echo base_url().'index.php/Welcome/';?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">Back</a></td>
+<td><td>
+        <td><td>
+        <td><td>
+</table>
+</div>
   </br>
   </br>
   <center><font face="Tamoha" size="8px" color="black"><h1>Welcome to Departmental DSR</h1></font></center>

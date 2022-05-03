@@ -30,7 +30,13 @@
             }
     </style>
 </br>
-
+<div><table align = "left">
+<td><a href="<?php echo base_url().'index.php/Welcome/dsr_cs';?>" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">Back</a></td>
+<td><td>
+        <td><td>
+        <td><td>
+</table>
+</div>
             <div class="container"> 
                <center> <h1>Welcome to Distribution Details</h1> </center>
             </div>
@@ -46,7 +52,6 @@
                         <th scope="col">Date Distributed</th>
                         <th scope="col">Head Office Initials</th>
                         <th scope="col">Stamp of Initial</th>
-                        <th scope="col">Edit</th>
                     </tr>
 
                     
